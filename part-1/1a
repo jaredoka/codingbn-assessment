@@ -1,0 +1,33 @@
+A. Logic & Patterns
+
+
+1. You are given the sequence: 2, 4, 8, 16, ... . What comes next, and how did you figure out the pattern?
+-32. Every number that comes after the first number is times two. So every subsequent number will follow the formula: n*2 (with n being the previous sequence number).
+
+2. There are 8 balls, and one of them is heavier than the rest. You only have a two-pan balance scale (not a digital
+scale), and you can only use it twice. How would you find the heavier ball?
+-First time, split into 4 and 4 balls, then weigh place them onto the weighing scale. The heavier one will be part of the 4 balls that are heavier.
+Second time, split the 4 remaining balls into 2 and 2 balls, then repeat the experiment. The heavier ball will be one of the 2 remaining balls.
+
+3. You are asked to sort 10 books from thinnest to thickest, but you can only compare 2 books at a time. Explain,
+step by step, how you would sort them from start to finish.
+-10 books, sort only 2 at each time. We can tell which book is thicker or thinner by comparing 2 books at a time. Each time when comparing the 2 books,
+place the thicker book on the right side, and the thinner book on the left side. Keep repeating the experiment and the end result should be that the books should be arranged ascendingly from thinnest (left side) to thickest (right side) even when comparing ascendingly.
+
+4. You save money starting with $1 on Monday, then double the amount every following day ($2 on Tuesday, $4
+on Wednesday, and so on). How much would you have saved in total by Sunday? Explain how you worked it out.
+-That is a total of 7 days. Monday is $1, then every subsequent day, it doubled. That means the subsequent days have a formula applied: n*2 (with n being the previous day's amount).
+
+5. There are three switches outside a room, and only one light bulb inside the room, connected to just one of the
+switches. The bulb is off, and you may only enter the room one time to check it. How would you figure out which
+switch controls the bulb?
+-Assuming all 3 switches are off currently. I will turn on Switch 1 and enter the room to check. If it is off, then I can only conclude that either Switch 2 or Switch 3 controls the bulb. With only one time to enter the room, there is no solution to this problem.
+
+
+6. Look at this pattern: 1, 4, 9, 16, 25, ... What is the next number, and how did you find the pattern?
+-Each number is a multiple of its sequence number i.e. first number 1 = 1x1 equals 1, second number 2 = 2x2 equals 4, and so on. So the sixth number 6 will be 6x6 equalling 36.
+
+7. You need to find a specific name in a phone book containing 1,000 names sorted alphabetically. Would you start
+from page 1 and check every name one by one, or is there a faster way? Explain your approach and why it is faster
+(or not).
+-There is a faster way. First look at the name's first alphabet (if there is a second name/surname, look at it too) such as Jared Ong. Then in the phone book, look for the page with the alphabet starting with J, then Ja, then Jar, and so on. In a sense, we are looking for the name alphabetically but starting from the letter J, then fill in the rest alphabetically.
