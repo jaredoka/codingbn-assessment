@@ -11,22 +11,103 @@
 
 <p>1. Write an SQL query to list all students sorted by department name and GPA (ascending). The columns
 shown must be: department_name, student_name, and gpa.</p>
-<p style="color: green;">Answer: </p>
+<p style="color: green;">Answer: 
+    First, I would get all the data available from the both tables or join both of them. Then filter out the 3 columns, then first sort by department name,
+    then secondly, sort by GPA (both in ascending order).
+</p>
+
+    <pre>
+        <code>
+            SELECT * FROM Student Table
+            FULL JOIN Department Table ON Student Table.department_id = Department Table.department.id <!-- assuming this will merge both tables together -->
+            SELECT
+                Student Table.department_name,
+                Student Table.student_name,
+                Student Table.gpa <!-- filter out the 3 needed columns -->
+            ORDER BY
+                department_name,
+                student_name,
+                gpa;
+        </code>
+    </pre>
+</p>
 
 <p>2. Write an SQL query to list all departments together with the count of students who have a GPA below
 3.0.</p>
-<p style="color: green;">Answer: </p>
+<p style="color: green;">Answer: 
+    First, get all data together from both tables. List all possible department in one column, filter out the number of students with below 3.0 gpa
+    in each department.
+
+    <pre>
+        <code>
+            SELECT * FROM Student Table
+            FULL JOIN Department Table ON Student Table.department_id = Department Table.department.id <!-- assuming this will merge both tables together -->
+            SELECT
+                Student Table.department_name,
+                COUNT(Student Table.student_id) AS below_3_gpa,
+                WHERE gpa < 3.0, <!-- these should select the students that are below 3.0 gpa by their departments -->
+            GROUP BY department_name; <!-- this will bundle up the students from the same department into one COUNT number -->
+            <!-- End result should be two columns: department names, and student count. -->
+        </code>
+    </pre>
+</p>
 
 <p>3. Write an SQL query to list all departments together with the count of students who have a GPA above
 3.0.</p>
-<p style="color: green;">Answer: </p>
+<p style="color: green;">Answer: 
+    First, get all data together from both tables. List all possible department in one column, filter out the number of students with above 3.0 gpa
+    in each department.
+
+    <pre>
+        <code>
+            SELECT * FROM Student Table
+            FULL JOIN Department Table ON Student Table.department_id = Department Table.department.id <!-- assuming this will merge both tables together -->
+            SELECT
+                Student Table.department_name,
+                COUNT(Student Table.student_id) AS above_3_gpa,
+                WHERE gpa > 3.0, <!-- these should select the students that are above 3.0 gpa by their departments -->
+            GROUP BY department_name; <!-- this will bundle up the students from the same department into one COUNT number -->
+            <!-- End result should be two columns: department names, and student count. -->
+        </code>
+    </pre>
+</p>
 
 <p>4. Write an SQL query to list all departments together with their average GPA.</p>
-<p style="color: green;">Answer: </p>
+<p style="color: green;">Answer: 
+    First, join the data together. List the departments in one column. For each department, add all students gpa together then
+    divide by the number of students in each department (or average if there is such a function).
+
+    <pre>
+        <code>
+            SELECT * FROM Student Table
+            FULL JOIN Department Table ON Student Table.department_id = Department Table.department.id <!-- assuming this will merge both tables together -->
+            SELECT
+                Student Table.department_name,
+                ROUND(AVG(gpa), 2) AS average_gpa <!-- this will give the average gpa for each department in a 2 decimal point -->
+            GROUP BY department_name;
+            <!-- End result should be two columns: department names, and average gpa. -->
+        </code>
+    </pre>
+</p>
 
 <p>5. Write an SQL query to list all departments sorted by department name, together with the count of male
 and female students. Example output:</p>
-<p style="color: green;">Answer: </p>
+<p style="color: green;">Answer: 
+    First, join the data together. List the departments in one column. For each department, sum and group the students by gender.
+
+    <pre>
+        <code>
+            SELECT * FROM Student Table
+            FULL JOIN Department Table ON Student Table.department_id = Department Table.department.id <!-- assuming this will merge both tables together -->
+            SELECT
+                Student Table.department_name,
+                    SUM(CASE WHEN gender = 'men' THEN 1 ELSE 0) AS men, <!-- sum all male students by department -->
+                    SUM(CASE WHEN gender = 'female' THEN 1 ELSE 0) AS women, <!-- sum all female students by department -->
+            GROUP BY Student Table.gender;
+            <!-- End result should be 3 columns: department_name, women, and men. -->
+        </code>
+    </pre>
+</p>
 
 </body>
 </html>
