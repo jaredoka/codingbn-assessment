@@ -13,6 +13,8 @@
 Input : [ 23, 7, 42, 19, 36, 12, 4, 45, 29, 31 ]
 Output : [ 4, 7, 12, 19, 23, 29, 31, 36, 42, 45 ]</p>
 <p style="color: green;">Answer: 
+  There is a given array. I would first put the array into a variable, then
+  create a function that compares two numbers ascendingly. Then sort the array ascendingly.
 <pre>
   <code>
     const input = [23, 7, 42, 19, 36, 12, 4, 45, 29, 31];
@@ -32,6 +34,11 @@ Output : [ 4, 7, 12, 19, 23, 29, 31, 36, 42, 45 ]</p>
 Fibonacci(5) // returns [0, 1, 1, 2, 3]
 Fibonacci(13) // returns [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...]</p>
 <p style="color: green;">Answer: 
+  The question wants fibonacci numbers either the first 5 or first 13 numbers.
+  I would need to find a way to create a function that generate 
+  fibonacci numbers up to the user input value, if not the numbers would run infinitely.
+  The first function creates the fibonacci numbers.
+  The second function is a for loop that will generate the fibonacci numbers up to the user input.
     <pre>
       <code>
         function* fibonacciGenerator() {
@@ -39,7 +46,7 @@ Fibonacci(13) // returns [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...]</p>
           let next = 1;
           while (true) {
         yield current;
-        [current, next] = [next, current + next];
+        [current, next] = [next, current + next]; <!-- this is the formula for fibonacci numbers -->
           }
         }
         
@@ -62,6 +69,10 @@ Fibonacci(13) // returns [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...]</p>
 Input : 10
 Output : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29</p>
 <p style="color: green;">Answer: 
+  Prime numbers are not divisible to a 0 i.e. the remainder should not be a 0, 
+  so if the remainder is a 0, then the number is not a prime number.
+  Firstly, create a function that contains a for loop inside which can be conditioned
+  to have user input number limit.
     <pre>
       <code>
         function getPrimeNumbers(limit) {
@@ -90,6 +101,9 @@ Output : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29</p>
 <p>4. Write a function to find the letter that appears most frequently in a word (case insensitive).
 Example: if the given word is 'Hello World', the result should be the letter L.</p>
 <p style="color: green;">Answer: 
+  I would need to create a function that will convert the sentence to a lower or 
+  upper case for case insensitivity. Then a for loop for user input characters,
+  and there should be a syntax or formula for sum or count of the most characters in a sentence.
     <pre>
       <code>
         function findMostFrequentLetter(sentence) {
@@ -123,6 +137,11 @@ Example: if the given word is 'Hello World', the result should be the letter L.<
 Input : Hello my name is John Doe
 Output : 8 Vowels and 12 Consonants</p>
 <p style="color: green;">Answer: 
+  Vowels are AEIOU, consonants are the non-vowel characters. I would need to set variables
+  distinguishing vowels and consonants. Then create a function that can count the number of
+  vowels and consonants in the user input. Then the outputs would be numbers, then I need to
+  make the output as vowelCount + string + consonantCount + string to get the exact question
+  output.
     <pre>
       <code>
         const sentence = "Hello my name is John Doe";
