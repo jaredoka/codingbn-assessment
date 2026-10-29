@@ -1,0 +1,26 @@
+B1. Algorithm / Logic Test
+
+
+1. Given the following input array, write a function to sort it from smallest to largest:
+Input : [ 23, 7, 42, 19, 36, 12, 4, 45, 29, 31 ]
+Output : [ 4, 7, 12, 19, 23, 29, 31, 36, 42, 45 ]
+
+
+2. Write a function for the Fibonacci sequence, for example:
+Fibonacci(5) // returns [0, 1, 1, 2, 3]
+Fibonacci(13) // returns [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...]
+
+
+3. Write a function to find a sequence of prime numbers based on user input.
+Input : 10
+Output : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+
+
+4. Write a function to find the letter that appears most frequently in a word (case insensitive).
+Example: if the given word is 'Hello World', the result should be the letter L.
+
+
+5. Write a function to count the number of vowels and consonants in a given sentence.
+Input : Hello my name is John Doe
+Output : 8 Vowels and 12 Consonants
+

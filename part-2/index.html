@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingBN Participant Selection Assessment</title>
+</head>
+<body>
+    <h1>Part 2 B1. Logarithmic/Logic Test</h1>
+
+
+<p>1. Given the following input array, write a function to sort it from smallest to largest:
+Input : [ 23, 7, 42, 19, 36, 12, 4, 45, 29, 31 ]
+Output : [ 4, 7, 12, 19, 23, 29, 31, 36, 42, 45 ]</p>
+<p style="color: green;">Answer: 
+const input = [23, 7, 42, 19, 36, 12, 4, 45, 29, 31];
+const output = [4, 7, 12, 19, 23, 29, 31, 36, 42, 45];
+
+function compareNumbers (a, b) {
+    return a - b;
+};
+
+input.sort(compareNumbers);</p>
+
+
+<p>2. Write a function for the Fibonacci sequence, for example:
+Fibonacci(5) // returns [0, 1, 1, 2, 3]
+Fibonacci(13) // returns [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...]</p>
+<p style="color: green;">Answer: 
+    function* fibonacciGenerator() {
+  let current = 0;
+  let next = 1;
+  while (true) {
+    yield current;
+    [current, next] = [next, current + next];
+  }
+}
+
+function fibonacci(n) {
+    const gen = fibonacciGenerator();
+    const result = [];
+
+    for (let i = 1; i <= n; i++) {
+    result.push(gen.next().value);
+    }
+    return result;
+}
+
+console.log(fibonacci(5));
+console.log(fibonacci(13));
+</p>
+
+<p>3. Write a function to find a sequence of prime numbers based on user input.
+Input : 10
+Output : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29</p>
+<p style="color: green;">Answer: 
+    function getPrimeNumbers(limit) {
+    let primesFound = 0;
+    
+    for (let num = 2; primesFound < limit; num++) {
+        let isPrime = true;
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                isPrime = false; 
+                break;
+            }
+        }
+
+        if (isPrime) {
+            console.log(num);
+            primesFound++;
+        }
+    }
+}
+
+getPrimeNumbers(10);
+</p>
+
+<p>4. Write a function to find the letter that appears most frequently in a word (case insensitive).
+Example: if the given word is 'Hello World', the result should be the letter L.</p>
+<p style="color: green;">Answer: 
+    function findMostFrequentLetter(sentence) {
+  const cleanText = sentence.toLowerCase().replace(/[^a-z]/g, '');
+  
+  const charMap = {};
+  let maxCount = 0;
+  let maxChar = '';
+
+  for (let i = 0; i < cleanText.length; i++) {
+    const char = cleanText[i];
+    
+    charMap[char] = (charMap[char] || 0) + 1;
+    
+    if (charMap[char] > maxCount) {
+      maxCount = charMap[char];
+      maxChar = char;
+    }
+  }
+
+  return { letter: maxChar, count: maxCount };
+}
+
+const text = "Hello World"; 
+console.log(findMostFrequentLetter(text)); 
+</p>
+
+<p>5. Write a function to count the number of vowels and consonants in a given sentence.
+Input : Hello my name is John Doe
+Output : 8 Vowels and 12 Consonants</p>
+<p style="color: green;">Answer: 
+    const sentence = "Hello my name is John Doe";
+const vowelsList = "aeiouAEIOU";
+
+let vowelCount = 0;
+let consonantCount = 0;
+
+for (const char of sentence) {
+  if (char.toLowerCase() !== char.toUpperCase()) {
+    if (vowelsList.includes(char)) {
+      vowelCount++;
+    } else {
+      consonantCount++; 
+    }
+  }
+}
+
+console.log(vowelCount + " Vowels and " + consonantCount + " Consonants")
+</p>
+
+
+    <h1>Part 2 B2. Database Test</h1>
+
+
+<p>1. Write an SQL query to list all students sorted by department name and GPA (ascending). The columns
+shown must be: department_name, student_name, and gpa.</p>
+<p style="color: green;">Answer: </p>
+
+<p>2. Write an SQL query to list all departments together with the count of students who have a GPA below
+3.0.</p>
+<p style="color: green;">Answer: </p>
+
+<p>3. Write an SQL query to list all departments together with the count of students who have a GPA above
+3.0.</p>
+<p style="color: green;">Answer: </p>
+
+<p>4. Write an SQL query to list all departments together with their average GPA.</p>
+<p style="color: green;">Answer: </p>
+
+<p>5. Write an SQL query to list all departments sorted by department name, together with the count of male
+and female students. Example output:</p>
+<p style="color: green;">Answer: </p>
+
+
+    <h1>Part 2 B3. Frontend Test</h1>
+
+
+<p>1. Create an HTML page based on the following layout template (Sidebar, Menu, Content, Footer):</p>
+<p style="color: green;">Answer: </p>
+
+<p>2. Create a simple calculator using HTML and JavaScript (Number 1 input, Number 2 input, a Calculate
+button, and a displayed Result — e.g. 2 + 3 = 5).</p>
+<p style="color: green;">Answer: </p>
+
+<p>3. Create an HTML form that validates before submitting (e.g. Name, Email, Address fields — a warning
+message such as 'Please fill out this field' should appear if a required field is left empty).</p>
+<p style="color: green;">Answer: </p>
+
+<p>4. Create an HTML table that can search student names, with columns for Name, Department, and GPA.</p>
+<p style="color: green;">Answer: </p>
+
+<p>5. Create a multistep HTML form (a multi-step registration form with a progress indicator, e.g. a Name
+field on the first step, followed by additional steps, with a Next button).</p>
+<p style="color: green;">Answer: </p>
+
+
+</body>
+</html>

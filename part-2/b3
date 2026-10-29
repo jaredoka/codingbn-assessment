@@ -1,0 +1,20 @@
+B3. Frontend Test
+
+
+1. Create an HTML page based on the following layout template (Sidebar, Menu, Content, Footer):
+
+
+2. Create a simple calculator using HTML and JavaScript (Number 1 input, Number 2 input, a Calculate
+button, and a displayed Result — e.g. 2 + 3 = 5).
+
+
+3. Create an HTML form that validates before submitting (e.g. Name, Email, Address fields — a warning
+message such as 'Please fill out this field' should appear if a required field is left empty).
+
+
+4. Create an HTML table that can search student names, with columns for Name, Department, and GPA.
+
+
+5. Create a multistep HTML form (a multi-step registration form with a progress indicator, e.g. a Name
+field on the first step, followed by additional steps, with a Next button).
+
