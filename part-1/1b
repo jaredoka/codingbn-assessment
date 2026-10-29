@@ -1,0 +1,37 @@
+B. Applied Case Studies / Problem Solving
+
+
+8. Imagine you work at a small grocery store, and every day many items come in and go out. The owner wants to
+know which items sold the best this week, but the data is still recorded in a plain notebook. If you were asked to
+help figure this out, how would you start? What information would you need to collect first, and how would you
+process it?
+-The plain notebook is key for the starting process because it contains all the data. I will first record all the data into a spreadsheet, making sure there is no case sensitive differentiation for the same items. There is a function called COUNT which gives the total number of the item being sold, then sort the number by descending order. The owner can see how each item sold this week for all the items, starting from the best to the worst. Even better if I added another column for category then the owner can see best to worst items sold by category.
+
+9. You are asked to build a simple queue system for a small clinic so patients don't need to line up physically. You
+don't yet know how to build the actual application, but explain: what would the flow look like from a patient arriving
+to being called in by the doctor? What information would the system need to record?
+-The patient arrives in the clinic, takes a number, waits for the number to be called, then called in by the doctor. The system needs to record increasing numbers with a new day starting from zero, number the doctor is currently seeing, a way for the patient to know what number it is currently at (so that patients don't need to estimate the timing needed for their turn).
+Therefore, the system needs to record: date, time, incremental patient queue numbers, the queue number currently seen by the doctor.
+
+10. Describe a real experience (not hypothetical) where you were learning something new and hit a wall or a problem
+you didn't understand at all (in any area, not necessarily IT). How did you eventually find a solution?
+-In my previous aquaculture job, we were raising sturgeons in a closed recirculating aquaculture system indoors. We had an ammonia/nitrate/nitrite spike problem and we weren't sure what was causing it. Ammonia/nitrate/nitrite spikes can come from the multiple sources such as water source, fish food, fish tank, or the biofilter. Taking samples from the water source, fish food, and fish tank is straight forward (just take a water collecting sample and collect it) but how can we take samples from a biofilter where the bulk of the nitrogen cycle is occurring, samples from one side will have different results from the other side. So I had to look up the web for better solutions for measuring it and found that we can measure by collecting water samples from the biofilter outlet.
+
+11. You need to place 40 students into groups of 4 for a class project, and you want to make sure no group repeats
+the exact same combination of students from a previous project. How would you approach grouping them fairly?
+-That would mean there's 10 groups for the class project. I would sort their names alphabetically then make the groups of 4 stay in their fixed position. Then randomly pick one student and slot the student to the start of the line, this would shift every student by 1 and make the group no longer have the exact same combination.
+
+
+12. A food delivery app notices that many customers cancel their orders after waiting more than 20 minutes. If you
+were asked to figure out why this is happening and propose a fix, what steps would you take?
+-The likely reason for customers cancelling is the >20 minutes wait. I would need to find out what parties are involved in a typical order: the restaurant (find out how long each restaurant takes to prepare and get the order ready), the delivery person (find out the time needed for each driver to drive per km, and the total delivery time for each order). The external factor that I cannot control would be from the restaurant's side so for the delivery changes - possibly make a system where drivers located closer to the restaurant would be prioritised to get those orders to limit the travelling time and/or drivers that have a shorter delivery time (data-driven) will be prioritised for longer ranged delivery orders.
+
+
+13. You're helping a small library that still tracks borrowed books on paper. They want to know which books are
+currently overdue. If you had to design a simple way to track this, even without any app, what information would
+you need to record, and how would you check for overdue books quickly?
+-I will need these information to create a borrowed books workflow for the library: book unique serial number, date borrowed, date to return book, date book is returned, and a book status column. All books borrowed will have a date in the 'date borrowed' column and books that have not been returned will not have any data in its column. This way, we can see the each book's status - whether it be still in library, borrowed, or overdue.
+
+14. Two people are arguing about which route is faster to get to the airport, and neither has any proof. How would
+you determine, in a fair and objective way, which route is actually faster?
+-Assuming no traffic, we can determine the faster route by measuring the distance needed to travel, which can be done by plotting from the starting point to the destination (airport). Then whichever route that has the least distance will be the faster route.

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingBN Participant Selection Assessment</title>
+</head>
+<body>
+    <h1>Part A. Logic & Patterns</h1>
+
+
+<p>1. You are given the sequence: 2, 4, 8, 16, ... . What comes next, and how did you figure out the pattern?</p>
+<p style="color: green;">Answer: 32. Every number that comes after the first number is times two. So every subsequent number will follow the formula: n*2 (with n being the previous sequence number).
+</p>
+
+<p>2. There are 8 balls, and one of them is heavier than the rest. You only have a two-pan balance scale (not a digital
+scale), and you can only use it twice. How would you find the heavier ball?</p>
+<p style="color: green;">Answer: First time, split into 4 and 4 balls, then weigh place them onto the weighing scale. The heavier one will be part of the 4 balls that are heavier.
+Second time, split the 4 remaining balls into 2 and 2 balls, then repeat the experiment. The heavier ball will be one of the 2 remaining balls.</p>
+
+<p>3. You are asked to sort 10 books from thinnest to thickest, but you can only compare 2 books at a time. Explain,
+step by step, how you would sort them from start to finish.</p>
+<p style="color: green;">Answer: 10 books, sort only 2 at each time. We can tell which book is thicker or thinner by comparing 2 books at a time. Each time when comparing the 2 books,
+place the thicker book on the right side, and the thinner book on the left side. Keep repeating the experiment and the end result should be that the books should be arranged ascendingly from thinnest (left side) to thickest (right side) even when comparing ascendingly.</p>
+
+<p>4. You save money starting with $1 on Monday, then double the amount every following day ($2 on Tuesday, $4
+on Wednesday, and so on). How much would you have saved in total by Sunday? Explain how you worked it out.</p>
+<p style="color: green;">Answer: That is a total of 7 days. Monday is $1, then every subsequent day, it doubled. That means the subsequent days have a formula applied: n*2 (with n being the previous day's amount).
+</p>
+
+<p>5. There are three switches outside a room, and only one light bulb inside the room, connected to just one of the
+switches. The bulb is off, and you may only enter the room one time to check it. How would you figure out which
+switch controls the bulb?</p>
+<p style="color: green;">Answer: Assuming all 3 switches are off currently. I will turn on Switch 1 and enter the room to check. If it is off, then I can only conclude that either Switch 2 or Switch 3 controls the bulb. With only one time to enter the room, there is no solution to this problem.
+</p>
+
+<p>6. Look at this pattern: 1, 4, 9, 16, 25, ... What is the next number, and how did you find the pattern?</p>
+<p style="color: green;">Answer: Each number is a multiple of its sequence number i.e. first number 1 = 1x1 equals 1, second number 2 = 2x2 equals 4, and so on. So the sixth number 6 will be 6x6 equalling 36.</p>
+
+<p>7. You need to find a specific name in a phone book containing 1,000 names sorted alphabetically. Would you start
+from page 1 and check every name one by one, or is there a faster way? Explain your approach and why it is faster
+(or not).</p>
+<p style="color: green;">Answer: There is a faster way. First look at the name's first alphabet (if there is a second name/surname, look at it too) such as Jared Ong. Then in the phone book, look for the page with the alphabet starting with J, then Ja, then Jar, and so on. In a sense, we are looking for the name alphabetically but starting from the letter J, then fill in the rest alphabetically.</p>
+
+    <h1>B. Applied Case Studies / Problem Solving</h1>
+
+
+<p>8. Imagine you work at a small grocery store, and every day many items come in and go out. The owner wants to
+know which items sold the best this week, but the data is still recorded in a plain notebook. If you were asked to
+help figure this out, how would you start? What information would you need to collect first, and how would you
+process it?</p>
+<p style="color: green;">Answer: The plain notebook is key for the starting process because it contains all the data. I will first record all the data into a spreadsheet, making sure there is no case sensitive differentiation for the same items. There is a function called COUNT which gives the total number of the item being sold, then sort the number by descending order. The owner can see how each item sold this week for all the items, starting from the best to the worst. Even better if I added another column for category then the owner can see best to worst items sold by category.
+</p>
+
+<p>9. You are asked to build a simple queue system for a small clinic so patients don't need to line up physically. You
+don't yet know how to build the actual application, but explain: what would the flow look like from a patient arriving
+to being called in by the doctor? What information would the system need to record?</p>
+<p style="color: green;">Answer: The patient arrives in the clinic, takes a number, waits for the number to be called, then called in by the doctor. The system needs to record increasing numbers with a new day starting from zero, number the doctor is currently seeing, a way for the patient to know what number it is currently at (so that patients don't need to estimate the timing needed for their turn).
+Therefore, the system needs to record: date, time, incremental patient queue numbers, the queue number currently seen by the doctor.</p>
+
+<p>10. Describe a real experience (not hypothetical) where you were learning something new and hit a wall or a problem
+you didn't understand at all (in any area, not necessarily IT). How did you eventually find a solution?</p>
+<p style="color: green;">Answer: In my previous aquaculture job, we were raising sturgeons in a closed recirculating aquaculture system indoors. We had an ammonia/nitrate/nitrite spike problem and we weren't sure what was causing it. Ammonia/nitrate/nitrite spikes can come from the multiple sources such as water source, fish food, fish tank, or the biofilter. Taking samples from the water source, fish food, and fish tank is straight forward (just take a water collecting sample and collect it) but how can we take samples from a biofilter where the bulk of the nitrogen cycle is occurring, samples from one side will have different results from the other side. So I had to look up the internet for better solutions to measuring it and found that we can measure them by collecting water samples from the biofilter outlet.</p>
+
+<p>11. You need to place 40 students into groups of 4 for a class project, and you want to make sure no group repeats
+the exact same combination of students from a previous project. How would you approach grouping them fairly?
+-That would mean there's 10 groups for the class project.</p>
+<p style="color: green;">Answer: That would mean there's 10 groups for the class project. I would sort their names alphabetically then make the groups of 4 stay in their fixed position. Then randomly pick one student and slot the student to the start of the line, this would shift every student by 1 and make the group no longer have the exact same combination.</p>
+
+<p>12. A food delivery app notices that many customers cancel their orders after waiting more than 20 minutes. If you
+were asked to figure out why this is happening and propose a fix, what steps would you take?</p>
+<p style="color: green;">Answer: The likely reason for customers cancelling is the >20 minutes wait. I would need to find out what parties are involved in a typical order: the restaurant (find out how long each restaurant takes to prepare and get the order ready), the delivery person (find out the time needed for each driver to drive per km, and the total delivery time for each order). The external factor that I cannot control would be from the restaurant's side so for the delivery changes - possibly make a system where drivers located closer to the restaurant would be prioritised to get those orders to limit the travelling time and/or drivers that have a shorter delivery time (data-driven) will be prioritised for longer ranged delivery orders.</p>
+
+<p>13. You're helping a small library that still tracks borrowed books on paper. They want to know which books are
+currently overdue. If you had to design a simple way to track this, even without any app, what information would
+you need to record, and how would you check for overdue books quickly?</p>
+<p style="color: green;">Answer: I will need these information to create a borrowed books workflow for the library: book unique serial number, date borrowed, date to return book, date book is returned, and a book status column. All books borrowed will have a date in the 'date borrowed' column and books that have not been returned will not have any data in its column. This way, we can see the each book's status - whether it be still in library, borrowed, or overdue.</p>
+
+<p>14. Two people are arguing about which route is faster to get to the airport, and neither has any proof. How would
+you determine, in a fair and objective way, which route is actually faster?</p>
+<p style="color: green;">Answer: Assuming no traffic, we can determine the faster route by measuring the distance needed to travel, which can be done by plotting from the starting point to the destination (airport). Then whichever route that has the least distance will be the faster route.</p>
+
+</body>
+</html>
