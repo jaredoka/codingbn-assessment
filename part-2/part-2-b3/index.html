@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingBN Participant Selection Assessment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Simple styling to hide inactive steps and color the progress indicators */
+        .form-step { display: none; }
+        .form-step.active { display: block; }
+        .indicator { color: gray; margin-right: 15px; font-weight: bold; }
+        .indicator.active { color: blue; }
+        .indicator.completed { color: green; }
+    </style>
+</head>
+<body>
+
+    <!-- Main grid container -->
+    <div class="grid-container">
+        
+        <div class="sidebar">
+            <p>Sidebar</p>
+        </div>
+
+        <!-- Menu container -->
+        <div class="menu">
+            <p>Menu</p>
+        </div>
+
+        <!-- Content container -->
+        <div class="content">
+            <h1>Part 2 B3. Frontend Test</h1>
+
+            <p>1. Create an HTML page based on the following layout template (Sidebar, Menu, Content, Footer):</p>
+            <p style="color: green;">Answer: </p>
+
+            <p>2. Create a simple calculator using HTML and JavaScript (Number 1 input, Number 2 input, a Calculate
+            button, and a displayed Result — e.g. 2 + 3 = 5).</p>
+            <p style="color: green;">Answer: 
+                    <input type="number" id="num1" placeholder="Enter first number">
+                    <input type="number" id="num2" placeholder="Enter second number">
+                    <button id="addBtn">Calculate</button>
+                    <p>Result: <span id="result">0</span></p>
+                    <script src="p2b3-2.js"></script>
+            </p>
+
+            <p>3. Create an HTML form that validates before submitting (e.g. Name, Email, Address fields — a warning
+            message such as 'Please fill out this field' should appear if a required field is left empty).</p>
+            <p style="color: green;">Answer: 
+             <form id="userForm" novalidate>
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <span id="nameError" style="color: red; display: block; height: 1.2em;"></span>
+                </div>
+
+            <br>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" placeholder="Enter your email address">
+                <span id="emailError" style="color: red; display: block; height: 1.2em;"></span>
+            </div>
+            <br>
+        
+            <div>
+                <label for="address">Address:</label><br>
+                <textarea id="address" placeholder="Enter your current address"></textarea>
+                <span id="addressError" style="color: red; display: block; height: 1.2em;"></span>
+            </div>
+            <br>
+            
+            <button type="submit">Submit Form</button>
+            </form>
+            <script src="p2b3-3.js"></script>
+            </p>
+
+            <p>4. Create an HTML table that can search student names, with columns for Name, Department, and GPA.</p>
+            <p style="color: green;">Answer: 
+            <input type="text" id="studentSearch" placeholder="Search student names...">
+            <br><br>
+
+            <!-- Step 2: Create the table framework -->
+            <table border="1" id="studentTable" style="border-collapse: collapse; width: 50%; text-align: left;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="padding: 8px;">Name</th>
+                        <th style="padding: 8px;">Department</th>
+                        <th style="padding: 8px;">GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;" class="student-name">Alice Smith</td>
+                        <td style="padding: 8px;">Computer Science</td>
+                        <td style="padding: 8px;">3.8</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;" class="student-name">Bob Jones</td>
+                        <td style="padding: 8px;">Mechanical Engineering</td>
+                        <td style="padding: 8px;">3.2</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;" class="student-name">Charlie Brown</td>
+                        <td style="padding: 8px;">Business Administration</td>
+                        <td style="padding: 8px;">3.5</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;" class="student-name">Diana Prince</td>
+                        <td style="padding: 8px;">Physics</td>
+                        <td style="padding: 8px;">4.0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script src="p2b3-4.js"></script>
+                    </p>
+
+            <p>5. Create a multistep HTML form (a multi-step registration form with a progress indicator, e.g. a Name
+            field on the first step, followed by additional steps, with a Next button).</p>
+            <p style="color: green;">Answer: 
+                <!-- Step 1: Progress Indicator Bar -->
+            <div style="margin-bottom: 20px;">
+                <span class="indicator active" id="ind-0">1. Account</span>
+                <span class="indicator" id="ind-1">2. Contact</span>
+                <span class="indicator" id="ind-2">3. Review</span>
+            </div>
+
+            <!-- Step 2: Form Structure -->
+            <form id="multiStepForm" novalidate>
+                
+                <!-- Fieldset 1: Account Info -->
+                <div class="form-step active">
+                    <h3>Step 1: Account Details</h3>
+                    <label for="stepName">Name:</label><br>
+                    <input type="text" id="stepName" placeholder="Enter your name"><br><br>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <!-- Fieldset 2: Contact Info -->
+                <div class="form-step">
+                    <h3>Step 2: Contact Information</h3>
+                    <label for="stepPhone">Phone Number:</label><br>
+                    <input type="tel" id="stepPhone" placeholder="Enter phone number"><br><br>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                </div>
+
+                <!-- Fieldset 3: Final Review -->
+                <div class="form-step">
+                    <h3>Step 3: Review & Submit</h3>
+                    <p>Please double-check your inputs before hitting submit.</p>
+                    <button type="button" class="prev-btn">Previous</button>
+                    <button type="submit">Submit Registration</button>
+                </div>
+
+            </form>
+            <script src="p2b3-5.js"></script>
+            </p>
+        </div>
+
+        <!-- Footer container -->
+        <div class="footer">
+            <p>Coding.bn Participant Selection Assessment</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
